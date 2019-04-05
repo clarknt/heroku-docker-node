@@ -13,14 +13,14 @@ $ docker build -t heroku-docker-node .
 ```
 
 ### Run
-Since the Dockerfile and the server.js are configured to run on Heroku, the PORT env variable has to be specified:
 ```sh
-$ docker run -p 8080:8080 -e PORT=8080 -d heroku-docker-node
+$ docker run -p 8080:8080 -e PORT=8080 heroku-docker-node
 ```
+The PORT environment variable is set the same way Heroku would.
 
 ### Test
 ```sh
-$ curl -i localhost:8080
+$ curl localhost:8080
 ```
 
 ## Heroku launch
